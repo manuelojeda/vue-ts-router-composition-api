@@ -5,14 +5,18 @@
   </div>
 </template>
 
-<script>
+<script lang='ts'>
 // @ is an alias to /src
+import { createComponent } from '@vue/composition-api'
 import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
+export default createComponent({
   name: 'home',
   components: {
     HelloWorld
+  },
+  setup () {
+    console.log('Composition API loaded')
   }
-}
+})
 </script>
